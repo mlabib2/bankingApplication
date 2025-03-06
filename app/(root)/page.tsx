@@ -2,9 +2,10 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div>
-      Child
-    </div>
+    <section classname="home">
+      <div classname="home-content"></div>
+      <header classname="home-header"></header>
+    </section>
   )
 }
 
