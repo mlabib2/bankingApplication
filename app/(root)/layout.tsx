@@ -12,9 +12,12 @@ export default function RootLayout({
       <Sidebar user={LoggedIn} />
       {children}
 
-      
+
     </main>
   );
 }
+
+
+
 
 
