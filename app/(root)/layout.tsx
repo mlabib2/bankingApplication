@@ -9,8 +9,10 @@ export default function RootLayout({
   const LoggedIn = {firstName: "Mahir", lastName: "Labib"};
   return (
       <main className="flex h-screen w-full font-inter">
-          <Sidebar user = {LoggedIn}/>
+          <Sidebar user  = {LoggedIn}/>
           {children}
       </main>
   );
 }
+
+
