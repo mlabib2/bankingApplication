@@ -90,3 +90,4 @@ const MobileNav = () => {
 };
 
 export default MobileNav;
+// MobileNav component is used to create a mobile navigation menu using Radix UI's Sheet component.
