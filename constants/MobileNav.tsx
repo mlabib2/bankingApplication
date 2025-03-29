@@ -6,7 +6,9 @@ import {
   SheetClose,
   SheetContent,
   SheetTrigger,
+  SheetTitle,
 } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -28,6 +30,11 @@ const MobileNav = () => {
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-white">
+          {/* Add SheetTitle here for accessibility */}
+          <SheetTitle>
+            <VisuallyHidden>Navigation Menu</VisuallyHidden>
+          </SheetTitle>
+
           <Link
             href="/"
             className="cursor-pointer flex items-center gap-1 px-4"
@@ -44,22 +51,20 @@ const MobileNav = () => {
           </Link>
 
           <div className="mobilenav-sheet">
-            {/* SheetClose --> Click elsewhere to close the sheet  */}
             <SheetClose asChild>
               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
-                {/* Sidebar Navigation Links */}
                 {sidebarLinks.map((item) => {
                   const isActive =
                     pathname === item.route || pathname.startsWith(item.route);
+
                   return (
                     <SheetClose asChild key={item.route}>
                       <Link
                         href={item.route}
-                        key={item.label}
                         className={cn("mobilenav-sheet_close w-full", {
                           "bg-bank-gradient": isActive,
                         })}
-                        style={{ color: isActive ? "#ffffff" : "#000000" }} // Explicit inline styling for color
+                        style={{ color: isActive ? "#ffffff" : "#000000" }}
                       >
                         <Image
                           src={item.imgURL}
@@ -70,7 +75,6 @@ const MobileNav = () => {
                             "brightness-[3] invert-0": isActive,
                           })}
                         />
-
                         <span>{item.label}</span>
                       </Link>
                     </SheetClose>
