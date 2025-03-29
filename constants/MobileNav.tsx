@@ -80,8 +80,10 @@ const MobileNav = () => {
                     </SheetClose>
                   );
                 })}
+                USER
               </nav>
             </SheetClose>
+            FOOTER
           </div>
         </SheetContent>
       </Sheet>
