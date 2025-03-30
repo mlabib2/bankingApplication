@@ -1,5 +1,6 @@
 import { formatAmount } from "@/lib/utils";
-import { Link } from "lucide-react";
+// ❌ Remove this line: import { Link } from "lucide-react";
+import Link from "next/link"; // ✅ Correct import for Next.js navigation
 import React from "react";
 
 const BankCard = ({
