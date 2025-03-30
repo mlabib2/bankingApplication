@@ -5,3 +5,4 @@ const BankCard = () => {
 };
 
 export default BankCard;
+// import React from "react";
